@@ -14,6 +14,13 @@ class App extends Component {
     };
   }
 
+  center() {
+    return {
+      lat: this.state.selectedFlat.lat,
+      lng: this.state.selectedFlat.lng
+    };
+  }
+
   selectFlat = (index) => {
     this.setState({ selectedFlat: flats[index] });
   }
@@ -27,6 +34,9 @@ class App extends Component {
           selectFlat={this.selectFlat}
         />
         <div className="map-container">
+          <GoogleMapReact defaultCenter={this.center()} defaultZoom={12}>
+            <marker lat={this.state.selectedFlat.lat} lng={this.state.selectedFlat.lng}/>
+          </GoogleMapReact>
         </div>
       </div>
     );
