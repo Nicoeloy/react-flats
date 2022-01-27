@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import GoogleMapReact from 'google-map-react';
 
 import Flat from './flat';
 import FlatList from './flat_list';
@@ -10,7 +11,14 @@ class App extends Component {
   }
 
   render() {
-    return ();
+    return (
+      <div>
+        <FlatList
+        />
+        <div className="map-container">
+        </div>
+      </div>
+    );
   }
 }
 
