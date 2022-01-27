@@ -8,7 +8,7 @@ import Marker from './marker';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state {
+    this.state = {
       selectedFlat: flats[0],
       flats
     };
@@ -35,7 +35,7 @@ class App extends Component {
         />
         <div className="map-container">
           <GoogleMapReact defaultCenter={this.center()} defaultZoom={12}>
-            <marker lat={this.state.selectedFlat.lat} lng={this.state.selectedFlat.lng}/>
+            <Marker lat={this.state.selectedFlat.lat} lng={this.state.selectedFlat.lng} />
           </GoogleMapReact>
         </div>
       </div>

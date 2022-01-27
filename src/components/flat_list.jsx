@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Flat from './flat';
 
 const FlatList = (props) => {
   const renderList = () => {
@@ -7,7 +8,7 @@ const FlatList = (props) => {
         <Flat
           flat={flat}
           key={flat.lat}
-          selected={flat.name === props.selected.name}
+          selected={flat.name === props.selectedFlat.name}
           index={index}
           selectFlat={props.selectFlat}
         />
@@ -21,6 +22,5 @@ const FlatList = (props) => {
     </div>
   );
 };
-
 
 export default FlatList;
